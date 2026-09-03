@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Professor Potato — The Tuber Realm</title>
+<style>
+:root{--gold:#d6aa25;--ink:#2f2925;--cream:#fffdf7;--wine:#551f2b;--line:#e7d8aa}
+*{box-sizing:border-box} body{margin:0;font-family:Georgia,'Times New Roman',serif;background:radial-gradient(circle at top,#fffaf0 0,#f6f0e3 40%,#ece1cc 100%);color:var(--ink)}
+.top{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:17px 18px;background:#302a26;color:#e2bd4a;border-bottom:1px solid #735d25;letter-spacing:.12em}.brand{font-weight:700}.sound{border:1px solid #d2aa35;border-radius:16px;padding:10px 14px;background:transparent;color:#e3bd49;font-family:inherit;letter-spacing:.13em}
+main{max-width:760px;margin:auto;padding:44px 18px 70px;text-align:center}.eyebrow{letter-spacing:.14em;color:#a98d55;font-size:.9rem;margin-bottom:24px}.portrait{width:230px;height:230px;margin:0 auto 30px;border-radius:50%;border:7px solid #d1a51f;background:radial-gradient(circle at 50% 34%,#e7c79e 0 21%,#b4814e 22% 42%,#4d231e 43% 100%);box-shadow:0 18px 34px #6c532d55;display:grid;place-items:center;position:relative;overflow:hidden}.potato{font-size:112px;filter:drop-shadow(0 5px 2px #0002);transform:translateY(10px)}.crown{position:absolute;top:18px;font-size:70px;animation:float 2.8s ease-in-out infinite}.robe{position:absolute;bottom:-22px;width:160px;height:95px;background:linear-gradient(#6f2634,#3e111d);border-radius:70px 70px 0 0;border:4px solid #e4d4b7}@keyframes float{50%{transform:translateY(-4px) rotate(-2deg)}}
+h1{font-size:clamp(2.4rem,9vw,4.6rem);line-height:.95;margin:0;color:#c99c1c;letter-spacing:.015em}.subtitle{font-style:italic;color:#c7b78d;margin:22px auto 12px;max-width:650px;font-size:1.08rem}.quote{font-family:Arial,sans-serif;font-style:italic;color:#b18b45;font-size:1.05rem;line-height:1.5;margin:0 auto 30px;max-width:650px}.heroBtn{width:100%;max-width:500px;padding:18px 20px;border:none;border-radius:15px;background:linear-gradient(#e3b824,#bd8a0f);box-shadow:inset 0 1px #ffe79b,0 8px 20px #a67d2840;font-family:Georgia,serif;font-weight:700;font-size:1.18rem;letter-spacing:.14em;color:#21180d}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:35px}.card{background:#fffaf1;border:1px solid var(--line);border-radius:18px;padding:22px 17px;box-shadow:0 8px 25px #69501c12}.card h3{margin:0 0 8px;color:#8c671a}.card p{font-family:Arial,sans-serif;color:#6e6357;line-height:1.45;min-height:42px}.btn{border:1px solid #c9a33a;background:#fff8df;border-radius:12px;padding:12px 14px;font-weight:700;color:#6d5116}.rank{margin:36px auto 0;max-width:580px;background:#2f2925;color:#ead699;padding:22px;border-radius:18px}.meter{height:12px;background:#5d5249;border-radius:99px;overflow:hidden;margin-top:12px}.fill{height:100%;width:16%;background:linear-gradient(90deg,#a97709,#f5d66e);transition:width .45s ease}.decree{margin-top:18px;font-family:Arial,sans-serif}.footer{margin-top:45px;letter-spacing:.12em;color:#9b7b3c}.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);background:#2e2925;color:#f7e9bd;padding:14px 18px;border-radius:14px;opacity:0;pointer-events:none;transition:.25s;max-width:88%;text-align:center;z-index:50}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}.confetti{position:fixed;top:-20px;font-size:22px;animation:fall 1.7s linear forwards;z-index:60}@keyframes fall{to{transform:translateY(110vh) rotate(540deg);opacity:.2}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}.card p{min-height:auto}.top{font-size:.83rem}.portrait{width:205px;height:205px}}
+</style>
+</head>
+<body>
+<div class="top"><div class="brand">👑 PROFESSOR POTATO</div><button class="sound" id="sound">🔕 SOUND</button></div>
+<main>
+<div class="eyebrow">OFFICIAL ROYAL ARCHIVE · THE TUBER REALM</div>
+<div class="portrait"><div class="robe"></div><div class="potato">🥔</div><div class="crown">👑</div></div>
+<h1>HIS MAJESTY,<br>PROFESSOR<br>POTATO</h1>
+<div class="subtitle">First of His Name, King of the Potatoes and Protector of the Tuber Realm.</div>
+<div class="quote">“Everyone’s fighting for the Iron Throne, but you’ve already claimed the Potato Throne.”</div>
+<button class="heroBtn" id="bow">🙇 BOW TO HIS MAJESTY</button>
+
+<div class="grid">
+<section class="card"><h3>👑 Crown Me</h3><p>Receive a completely serious and legally binding royal potato title.</p><button class="btn" id="crown">CROWN ME</button></section>
+<section class="card"><h3>🥔 Potato or Watermelon?</h3><p>Choose your destiny. The Crown may have opinions.</p><button class="btn" id="potato">POTATO</button> <button class="btn" id="watermelon">WATERMELON</button></section>
+<section class="card"><h3>🎓 Verify PhD</h3><p>Not every potato has a PhD, you know.</p><button class="btn" id="phd">VERIFY PHD</button></section>
+<section class="card"><h3>📜 Royal Decree</h3><p>Issue important legislation on behalf of the Tuber Realm.</p><button class="btn" id="decree">ISSUE DECREE</button></section>
+</div>
+
+<div class="rank"><strong id="rankName">Ordinary Potato</strong><div class="meter"><div class="fill" id="fill"></div></div><div class="decree" id="status">Royal reputation: suspiciously humble.</div></div>
+<div class="footer">LONG LIVE PROFESSOR POTATO. 👑🥔<br><small>IN SPUD WE TRUST</small></div>
+</main>
+<div class="toast" id="toast"></div>
+<script>
+const titles=[
+'Professor Potato, First of His Name',
+'King of the Potatoes',
+'Protector of the Tuber Realm',
+'Warden of the Watermelons',
+'Breaker of French Fries',
+'Keeper of the Sacred Spuds',
+'Rightful Heir to the Potato Throne'
+];
+const ranks=['Ordinary Potato','Educated Potato','Distinguished Potato','Professor Potato','Potato King','Supreme Tuber','Protector of the Tuber Realm'];
+const decrees=['All fries shall be respected as distant cousins.','Watermelon petitions will be reviewed and then denied.','Every potato is entitled to one tiny crown.','The realm officially recognizes naps as royal duties.','No potato shall be judged by its skin.'];
+let score=0,sound=false;
+const toast=document.getElementById('toast'),fill=document.getElementById('fill'),rankName=document.getElementById('rankName'),status=document.getElementById('status');
+function say(t){toast.textContent=t;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2600); if(sound&&window.speechSynthesis){speechSynthesis.cancel(); const u=new SpeechSynthesisUtterance(t);u.rate=.95;speechSynthesis.speak(u)}}
+function level(n=1){score=Math.min(score+n,ranks.length-1);rankName.textContent=ranks[score];fill.style.width=((score+1)/ranks.length*100)+'%';status.textContent='Royal reputation: '+(score<3?'rising rapidly.':score<5?'deeply prestigious.':'borderline unstoppable.');}
+function rain(){for(let i=0;i<18;i++){const e=document.createElement('div');e.className='confetti';e.textContent=Math.random()>.35?'🥔':'👑';e.style.left=Math.random()*100+'vw';e.style.animationDelay=Math.random()*.6+'s';document.body.appendChild(e);setTimeout(()=>e.remove(),2400)}}
+document.getElementById('bow').onclick=()=>{say('Your loyalty to the Tuber Realm has been noted.');level();rain()};
+document.getElementById('crown').onclick=()=>{say('TITLE GRANTED: '+titles[Math.floor(Math.random()*titles.length)]);level();rain()};
+document.getElementById('potato').onclick=()=>{say('Wise choice. The Crown approves. 🥔👑');level()};
+document.getElementById('watermelon').onclick=()=>{say('REQUEST DENIED BY THE CROWN. You have been promoted to Supreme Tuber.');score=Math.max(score,5);level(0);rain()};
+document.getElementById('phd').onclick=()=>{say('CERTIFIED: Professor Potato is, in fact, a Distinguished Potato. 🎓');score=Math.max(score,2);level(0)};
+document.getElementById('decree').onclick=()=>{say('ROYAL DECREE: '+decrees[Math.floor(Math.random()*decrees.length)]);level()};
+document.getElementById('sound').onclick=e=>{sound=!sound;e.target.textContent=sound?'🔔 SOUND':'🔕 SOUND';say(sound?'Royal fanfare enabled.':'The realm returns to dignified silence.')};
+</script>
+</body></html>
